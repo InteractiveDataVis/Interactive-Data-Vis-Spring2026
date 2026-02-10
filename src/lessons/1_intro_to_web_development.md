@@ -29,7 +29,7 @@ We will use servers to render our code, and clients to view it.
 ## Websites
 When we create a website, we are writing a "document" that needs to be available to other machines. We can assume that a website will be read on a web browser, so we need to make it in such a way that it is readable on a browser. This requires a specific file type, and originally, this was just simple HTML.
 
-We can still make those simple HTML files, but then other file types were added, like Javascript and CSS. HyperText Markup Language (HTML), Cascading Style Sheets (CSS), and JavaScript are the languages that run the web. They’re very closely related, but they’re also designed for very specific tasks. 
+We can still make those simple HTML files, but then other file types were added, like JavaScript and CSS. HyperText Markup Language (HTML), Cascading Style Sheets (CSS), and JavaScript are the languages that run the web. They’re very closely related, but they’re also designed for very specific tasks. 
 
 - HTML is for adding *meaning* to raw content by marking it up.
 - CSS is for *formatting* that marked up content.
@@ -108,7 +108,7 @@ Combining them creates an HTML button with interactivity:
 
 ### Markdown
 
-The final file format or syntax worth discussing in the context of what we are building together is Markdown. Markdown is a markup language for making formatted text in a plain-text editor. Markdown is just simply a syntax, which is respected by some technologies (like observable, and github) to render in a certain way. 
+The final file format or syntax worth discussing in the context of what we are building together is Markdown. Markdown is a markup language for making formatted text in a plain-text editor. Markdown is simply a syntax, which is respected by some technologies (like Observable and GitHub) to render in a certain way. 
 
 There are a [few rules to markdown](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN), but some of the simplest examples are: 
 
@@ -131,23 +131,40 @@ Markdown is typically helpful for things like text files within a GitHub reposit
 
 ## Version Control (Git, GitHub, and GitHub Pages)
 
-To help software engineers work together on projects, version control is a well-defined practice to organize and track the history of coding files. It acts like a google doc for coding files, where multiple people can access and edit the same files at the same time without loss of work. Although our work is not necessarily code collaborative, we will still leverage **Git** and **GitHub** to manage our codebase and share our work with the world.
+To help software engineers work together on projects, version control is a well-defined practice to organize and track the history of coding files. It acts like a google doc for coding files, where multiple people can access and edit the same files at the same time without loss of work. Although our work for this class is not necessarily code collaborative, we will still leverage **Git** and **GitHub** to manage our codebase and share our work with the world.
 
 ### Git
-Git is a version control system that intelligently tracks changes in files. It is particularly useful when you and a group of people are making changes to the same files at the same time. On your local computer, your work is organized into folders where you save your progress through "commits".
+Git is a version control system that intelligently tracks changes in files. It is particularly useful when you and a group of people are making changes to the same files at the same time. On your local computer, your work is organized into folders where you save your progress through "commits". Git is the system that we use to track code changes, while GitHub is the remote online platform that houses the code. 
 
 ### GitHub
-GitHub is a cloud-based platform where you can store, share, and work together with others to write code. It acts as the remote "repository" for your project. To move your work between your local computer and GitHub, you do the following:
+GitHub is a cloud-based platform where you can store, share, and work together with others to write code. It acts as the remote "repository" for your project. We will use that word often -- repository, or "repo" -- to describe the code "folder". There will be a **class** repository, and you will have a **personal** repository. 
+
+The class repository will include: 
+- a "template" of all the blank / uncompleted labs that you are assigned (on the `/main` branch)
+- a place where I will store any code we do together in class (on a `/class` branch)
+- a reference for class lessons in written form, just like this one. This lesson is written in markdown, [in the class repository](https://github.com/InteractiveDataVis/Interactive-Data-Vis-Spring2026/blob/main/src/lessons/1_intro_to_web_development.md), and deployed via GitHub Pages, just like your work will be. 
+
+When you create your personal version of the class repository, you will do something called [**forking**](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo). By forking, it allows you to: 
+- start with a populated repository, that includes all the technical set up for this project
+- continue to have connected visibility to the original class repository, and include updates from the original, upstream class repo with a simple command
+- have your own playground that does not affect the class repository
+- learn and get started with your own code working towards a portfolio
+
+There are way more in-depth details about these steps once you get started in the Lab 0 readme, but in theory, to move your work between your local computer and GitHub, you would do the following:
 1. **Stage**: Set some of your saved changes as ready for commit. 
 2. **Commit**: Commit those changes with a message. 
 3. **Push**: Sending your local commits up to the GitHub repository.
 
-Your code is now on GitHub, and it will build and push to your deployed site. 
-If there are changes to the class repository, you can pull those to your machine with a `git pull`. 
+
+Your code would then be on GitHub, and subsequently build and push to your deployed site. If there are changes to the class repository, you can pull those to your machine with a `git pull`. 
+
 4. **Pull**: Bringing the latest changes from the GitHub repository down to your local machine.
 
+This flow in action looks something like this:
 <img src="assets/git_flow.gif" alt="Pushing to GitHub" width="500">
 
 ### GitHub Pages
-GitHub Pages is a **static site hosting service**. It takes the HTML, CSS, and JavaScript files directly from a repository on GitHub and publishes them as a live website. The service optionally runs your files through a **build** process and then **deploys** them, making your work accessible to anyone via a public URL.
+GitHub Pages is an extension of GitHub, and it is a **static site hosting service**. It takes the files from your repository on GitHub, builds them into something renderable (from `.md` files to HTML/JS/CSS files), and publishes them as a live website. The service runs your files through a **build** process and then **deploys** them, making your work accessible to anyone via a public URL.
+
+This process can be complicated, so the class repository (and, subsequently, your forked repository) is already completely set up with the infrastructure to do this. You shouldn't have to change anything, and your page should build and deploy as soon as you push your code to GitHub. (If you're curious, the job that does this is located in the `.github/workflows/deploy.yml` file).
 
