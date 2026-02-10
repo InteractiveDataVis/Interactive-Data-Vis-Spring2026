@@ -1,0 +1,58 @@
+---
+description: Observable Plot syntax reference
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# Observable Plot Syntax
+
+## Basic Pattern
+
+```js
+Plot.markType(data, {x: "column1", y: "column2"}).plot()
+```
+
+## Common Marks
+
+| Mark | Use |
+|------|-----|
+| `dot` | Scatter plots |
+| `line`, `lineY` | Line charts |
+| `barX`, `barY` | Bar charts |
+| `areaY` | Area charts |
+| `rectY`, `rectX` | Histograms, heatmaps |
+| `cell` | Heatmaps (ordinal) |
+| `text` | Labels |
+| `ruleX`, `ruleY` | Reference lines |
+
+## Layering Marks
+
+Combine multiple marks with the `marks` array:
+```js
+Plot.plot({
+  marks: [
+    Plot.ruleY([0]),
+    Plot.lineY(data, {x: "date", y: "value"}),
+    Plot.dot(data, {x: "date", y: "value"})
+  ]
+})
+```
+
+## Common Options
+
+```js
+Plot.plot({
+  width: 800,
+  height: 400,
+  y: {grid: true, label: "Value"},
+  x: {label: "Date"},
+  color: {legend: true},
+  marks: [...]
+})
+```
+
+## Transforms
+
+- `Plot.binX({y: "count"}, {x: "column"})` - histogram binning
+- `Plot.groupX({y: "count"}, {x: "category"})` - group by category
+- `Plot.sort({x: "y"}, {x: "cat", y: "val"})` - sort by value

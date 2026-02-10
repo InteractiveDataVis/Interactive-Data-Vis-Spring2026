@@ -1,20 +1,63 @@
 // See https://observablehq.com/framework/config for documentation.
 export default {
   // The app’s title; used in the sidebar and webpage titles.
-  title: "Interactive-Data-Vis-Spring2026",
+  title: "Interactive Data Visualization (Spring 2026)",
+  theme: "light",
 
   // The pages and sections in the sidebar. If you don’t specify this option,
   // all pages will be listed in alphabetical order. Listing pages explicitly
   // lets you organize them into sections and have unlisted pages.
-  // pages: [
-  //   {
-  //     name: "Examples",
-  //     pages: [
-  //       {name: "Dashboard", path: "/example-dashboard"},
-  //       {name: "Report", path: "/example-report"}
-  //     ]
-  //   }
-  // ],
+  pages: [
+    {
+      name: "Lessons",
+      pages: [
+        { name: "Intro to Web Development", path: "/lessons/1_intro_to_web_development" },
+        // { name: "Intro to Observable Framework", path: "/lessons/2_intro_to_observable_framework" },
+        // { name: "Intro to Observable Plot", path: "/lessons/3_intro_to_observable_plot" },
+      ]
+    },
+    {
+      name: "Lab 0: Getting Started",
+      open: false,
+      pages: [
+        { name: "Instructions", path: "/lab_0/readme" },
+        { name: "Dashboard", path: "/lab_0/index" },
+      ],
+    },
+    {
+      name: "Lab 1: Prolific Pollinators",
+      open: false,
+      pages: [
+        // { name: "Instructions", path: "/lab_1/readme" },
+        // { name: "Dashboard", path: "/lab_1/index" },
+      ],
+    },
+    {
+      name: "Lab 2: Subway Staffing",
+      open: false,
+      pages: [
+        // { name: "Instructions", path: "/lab_2/readme" },
+        // { name: "Dashboard", path: "/lab_2/index" },
+      ],
+    },
+    {
+      name: "Lab 3: Mayoral Mystery",
+      open: false,
+      pages: [
+        // { name: "Instructions", path: "/lab_3/readme" },
+        // { name: "Dashboard", path: "/lab_3/index" },
+      ],
+    },
+    {
+      name: "Lab 4: Clearwater Crisis",
+      open: false,
+      pages: [
+        // { name: "Instructions", path: "/lab_4/readme" },
+        // { name: "Dashboard", path: "/lab_4/index" },
+      ],
+    }
+
+  ],
 
   // Content to add to the head of the page, e.g. for a favicon:
   head: '<link rel="icon" href="observable.png" type="image/png" sizes="32x32">',

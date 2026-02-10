@@ -2,3 +2,10 @@
 /dist/
 node_modules/
 yarn-error.log
+
+*/.observablehq/cache/
+**/drafts/*
+**/class_prep/*
+
+/.cursor/commands/*
+

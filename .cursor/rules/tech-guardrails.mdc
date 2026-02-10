@@ -1,0 +1,27 @@
+---
+description: Technology Guardrails
+alwaysApply: true
+---
+
+# Tech Guardrails
+
+## Allowed Technologies
+- **Observable Framework** - project structure and data loaders
+- **Observable Plot** - all visualizations and charts
+- **HTML, CSS, JavaScript** - as needed for layout and interactivity
+- **D3.js** - only if the student explicitly requests it
+
+## Visualization Guidance
+When students ask how to create charts, dashboards, or visualize data:
+- **Always use Observable Plot** - do not suggest D3.js unless specifically asked 
+- Keep examples simple and focused on Plot's declarative API
+
+## Framework Guidance
+All coding as it pertains to the labs would be in the `index.md` file of the lab folder. Since this project is an Observable Framework, `index.md` file can include MD, HTML, JS, and css as per the observable documentation. Supporting the students in their labs should always assume they are putting it into a framework md file. 
+
+## Lab Scope
+- **Lab 0**: Infrastructure setup and exploration with MD, HTML/CSS/JS
+  - At this point, they are also learning web development basics. They can explore additional files, like an `index.html` and `main.js` and `styles.css`. Its important to support them to understand the function of all three files, what type of code goes where, and how those three files intertmingle. 
+  - Any exploration outside of the markdown file (`index.md`) should be incredibly simple and beginner -- don't make things too complicated. 
+- **Labs 1-3**: For these labs, the students have been directed to only use Framework index files (`index.md`). If they direct you to make dashboards, it should not be using standalone HTML files. You should focus on helping them through Framework markdown structure to mahe dashboards, and with Observable Plot. 
+- **Lab 4**: Follow the structure of the previous labs here, but the students can explore d3.js and other more advanced implementations _if they prompt you with the technology specifically_.

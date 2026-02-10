@@ -1,0 +1,110 @@
+---
+description: Observable Framework markdown syntax reference
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# Observable Framework Markdown Syntax
+
+Markdown in Framework extends CommonMark with reactive JavaScript, HTML, grids, and cards.
+
+## Front Matter
+
+```yaml
+---
+title: My Page Title
+toc: false
+---
+```
+
+Common options: `title`, `toc`, `sidebar`, `theme`, `draft`
+
+## Fenced Code Blocks
+
+Use triple backticks with `js` to write JavaScript in markdown files.
+
+**Expression block** (displays automatically, no semicolon):
+```js
+1 + 2
+```
+
+**Program block** (no display, use for declarations):
+```js
+const data = [1, 2, 3];
+```
+
+## Inline Expressions
+
+Interpolate values with `${...}`:
+```
+The answer is ${1 + 2}.
+```
+
+## Display Function
+
+Use `display()` in program blocks to show output:
+```js
+const x = Math.random();
+display(x);
+```
+
+## Reactive Variables
+
+- `width` - current width of main element (use for responsive charts)
+- `now` - current time in milliseconds (updates continuously)
+
+## Code Block Directives
+
+- `echo` - show code alongside output: ` ```js echo `
+- `run=false` - show code without running: ` ```js run=false `
+
+## Responsive Charts
+
+Use `resize()` for responsive content in containers:
+```js
+resize((width) => Plot.barX(data).plot({width}))
+```
+
+## Grids (Dashboard Layout)
+
+```html
+<div class="grid grid-cols-2">
+  <div class="card">Left</div>
+  <div class="card">Right</div>
+</div>
+```
+
+- `grid-cols-2`, `grid-cols-3`, `grid-cols-4` - column count
+- `grid-colspan-2`, `grid-rowspan-2` - span multiple cells
+- Grids are automatically responsive
+
+## Cards
+
+```html
+<div class="card">
+  <h2>Card Title</h2>
+  <h3>Subtitle</h3>
+  ${Plot.dot(data, {x: "a", y: "b"}).plot()}
+</div>
+```
+
+## Notes / Callouts
+
+```html
+<div class="note">This is a note.</div>
+<div class="tip">This is a tip.</div>
+<div class="warning">This is a warning.</div>
+<div class="caution">This is a caution.</div>
+```
+
+## HTML in Markdown
+
+You can write HTML directly. Surround content with blank lines to use Markdown inside HTML:
+
+```html
+<div class="card">
+
+This is **Markdown** inside HTML!
+
+</div>
+```
