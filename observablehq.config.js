@@ -52,6 +52,13 @@ export default {
       ],
     },
     {
+      name: "Class Code",
+      open: false,
+      pages: [
+        { name: "Week 5: Intro to Observable Framework", path: "/class_code/week_5" },
+      ],
+    },
+    {
       name: "Lab 0: Getting Started",
       open: false,
       pages: [
