@@ -56,6 +56,7 @@ export default {
       open: false,
       pages: [
         { name: "Week 5: Intro to Observable Framework", path: "/class_code/week_5" },
+        { name: "Week 6: Intro to Observable Plot", path: "/class_code/week_6" },
       ],
     },
     {
