@@ -58,6 +58,7 @@ export default {
         { name: "Week 5: Intro to Observable Framework", path: "/class_code/week_5" },
         { name: "Week 6: Intro to Observable Plot", path: "/class_code/week_6" },
         { name: "Week 7: Transforms and Data Manipulation", path: "/class_code/week_7" },
+        { name: "Week 8: Data Types <> Scales <> Marks", path: "/class_code/week_8" },
       ],
     },
     {
