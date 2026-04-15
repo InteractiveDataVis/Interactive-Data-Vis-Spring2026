@@ -60,6 +60,7 @@ export default {
         { name: "Week 7: Transforms and Data Manipulation", path: "/class_code/week_7" },
         { name: "Week 8: Data Types <> Scales <> Marks", path: "/class_code/week_8" },
         { name: "Week 9: Data Joins and Annotations", path: "/class_code/week_9" },
+        { name: "Week 10: Faceting, SVGs, and Maps", path: "/class_code/week_10" },
       ],
     },
     {
