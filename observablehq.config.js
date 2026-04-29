@@ -55,12 +55,31 @@ export default {
       name: "Class Code",
       open: false,
       pages: [
-        { name: "Week 5: Intro to Observable Framework", path: "/class_code/week_5" },
-        { name: "Week 6: Intro to Observable Plot", path: "/class_code/week_6" },
-        { name: "Week 7: Transforms and Data Manipulation", path: "/class_code/week_7" },
-        { name: "Week 8: Data Types <> Scales <> Marks", path: "/class_code/week_8" },
-        { name: "Week 9: Data Joins and Annotations", path: "/class_code/week_9" },
-        { name: "Week 10: Faceting, SVGs, and Maps", path: "/class_code/week_10" },
+        {
+          name: "Week 5: Intro to Observable Framework",
+          path: "/class_code/week_5",
+        },
+        {
+          name: "Week 6: Intro to Observable Plot",
+          path: "/class_code/week_6",
+        },
+        {
+          name: "Week 7: Transforms and Data Manipulation",
+          path: "/class_code/week_7",
+        },
+        {
+          name: "Week 8: Data Types <> Scales <> Marks",
+          path: "/class_code/week_8",
+        },
+        {
+          name: "Week 9: Data Joins and Annotations",
+          path: "/class_code/week_9",
+        },
+        {
+          name: "Week 10: Faceting, SVGs, and Maps",
+          path: "/class_code/week_10",
+        },
+        { name: "Week 11: Intro to d3.js", path: "/class_code/week_11" },
       ],
     },
     {
@@ -106,10 +125,8 @@ export default {
     {
       name: "Scratchpad",
       open: false,
-      pages: [
-        { name: "Scratchpad", path: "/scratchpad/index" },
-      ],
-    }
+      pages: [{ name: "Scratchpad", path: "/scratchpad/index" }],
+    },
   ],
 
   // Content to add to the head of the page, e.g. for a favicon:
