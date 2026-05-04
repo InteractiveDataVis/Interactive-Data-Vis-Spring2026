@@ -84,6 +84,7 @@ export default {
           path: "/class_code/week_10",
         },
         { name: "Week 11: Intro to d3.js", path: "/class_code/week_11" },
+        { name: "Lab 2 Feedback", path: "/class_code/lab_2_feedback" },
         { name: "Week 12: Charts in d3.js", path: "/class_code/week_12" },
       ],
     },
